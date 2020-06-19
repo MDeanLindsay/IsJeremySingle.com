@@ -18,8 +18,14 @@ h1 {
 }
 
 /* Style the header with a grey background and some padding */
+
+/* Alternate bg's:
+https://imgur.com/mBgUS8C
+https://i.imgur.com/syD3h4a.jpg
+*/
+
 .bg {
-  background-image: url("https://i.imgur.com/syD3h4a.jpg");
+  background-image: url("https://imgur.com/mBgUS8C.png");
   height: 100vh;
   background-position: 70%;
   background-repeat: no-repeat;
@@ -29,7 +35,7 @@ h1 {
   align-items: center;
   flex-direction: column;
 }
-
+/*    */
 .content {
   margin-bottom: 25vh;
 }
