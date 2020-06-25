@@ -1,6 +1,9 @@
+html {
+  font-size: 12px;
+}
+
 body {
   font-family: "Raleway", sans-serif;
-
   margin: 0;
 }
 
@@ -35,8 +38,16 @@ https://i.imgur.com/syD3h4a.jpg
   align-items: center;
   flex-direction: column;
 }
-/*    */
+
+h1 {
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
 .content {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 2rem;
+  padding: 2rem;
   margin-bottom: 25vh;
 }
 
