@@ -5,6 +5,10 @@ html {
 body {
   font-family: "Raleway", monospace;
   margin: 0;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  
 }
 
 h2 {
@@ -32,11 +36,24 @@ h1 {
 /* Alternate bg's:
 https://imgur.com/mBgUS8C
 https://i.imgur.com/syD3h4a.jpg
+https://imgur.com/mBgUS8C.png
 */
 
-.bg {
-  background-image: url("https://imgur.com/mBgUS8C.png");
+#container {
   height: 100vh;
+  width: 100%;
+  position: right;
+}
+
+.animate{
+
+  height:fit-content;
+  width: fit-content;
+}
+
+.bg {
+  background-image: url("https://i.imgur.com/syD3h4a.jpg");
+  height: calc(100vh + 100px);
   background-position: 70%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,14 +61,15 @@ https://i.imgur.com/syD3h4a.jpg
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 
 .content {
-  background-color: rgb(243, 118, 206);
+  background-color: rgb(243, 118, 206, 1);
   border-radius: 5px;
   padding: 2rem;
-  margin-bottom: 25vh;
+  margin-bottom: 20vh;
 
 }
 
@@ -93,7 +111,7 @@ https://i.imgur.com/syD3h4a.jpg
 
   h2 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     -webkit-font-smoothing: antialiased
   }
@@ -107,8 +125,8 @@ https://i.imgur.com/syD3h4a.jpg
 
   .content {
     /* pull the content lower, below Jerm's face */
-    margin-bottom: 5vh;
-    padding: 1rem 2rem;
+    margin-bottom: 15vh;
+    padding: .5rem 2rem;
     
   }
 
