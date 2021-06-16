@@ -13,7 +13,6 @@ h2 {
   margin-top: 1rem;
   font-size: 3.5rem;
   text-align: center;
-  
   -webkit-font-smoothing: antialiased
 }
 
@@ -91,6 +90,14 @@ https://i.imgur.com/syD3h4a.jpg
 
 
 @media screen and (max-width: 800px) {
+
+  h2 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    -webkit-font-smoothing: antialiased
+  }
+
   .countup {
     /* make time blocks vertically stacked */
     flex-direction: column;
