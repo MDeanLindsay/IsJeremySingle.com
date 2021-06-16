@@ -46,7 +46,6 @@ https://imgur.com/mBgUS8C.png
 }
 
 .animate{
-
   height:fit-content;
   width: fit-content;
 }
@@ -125,7 +124,7 @@ https://imgur.com/mBgUS8C.png
 
   .content {
     /* pull the content lower, below Jerm's face */
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
     padding: .5rem 2rem;
     
   }
