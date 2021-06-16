@@ -3,22 +3,30 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", monospace;
   margin: 0;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-size: 3.5rem;
+  text-align: center;
+  
+  -webkit-font-smoothing: antialiased
 }
 
 h1 {
   color: white;
   margin-bottom: 1rem;
-  font-size: 3rem;
+  margin-top: 1rem;
+  font-size: 2rem;
   text-align: center;
+  
+  -webkit-font-smoothing: antialiased
 }
 
-@media screen and (max-height: 900px) {
-  h1 {
-    font-size: 1.75rem;
-  }
-}
 
 /* Style the header with a grey background and some padding */
 
@@ -39,16 +47,13 @@ https://i.imgur.com/syD3h4a.jpg
   flex-direction: column;
 }
 
-h1 {
-  margin-bottom: 1rem;
-  margin-top: 0;
-}
 
 .content {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 2rem;
+  background-color: rgb(243, 118, 206);
+  border-radius: 5px;
   padding: 2rem;
   margin-bottom: 25vh;
+
 }
 
 .info {
@@ -67,11 +72,10 @@ h1 {
 
 .countup .timeel {
   display: inline-block;
-  padding: 0.5rem;
-  background: #151515;
-  margin: 0;
-  color: white;
-  border-radius: 10px 0 0 10px;
+  padding: 1rem;
+  background: white;
+  color: black;
+  border-radius: 5px 0 0 5px;
 }
 
 .countup .timeel:nth-child(even) {
@@ -80,17 +84,11 @@ h1 {
 }
 
 .countup span[class*="timeRef"] {
-  border-radius: 0 10px 10px 0;
-  background: blanchedalmond;
+  border-radius: 0 5px 5px 0;
+  background: white;
   color: black;
 }
 
-.twitter-mention-button {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-}
 
 @media screen and (max-width: 800px) {
   .countup {
@@ -102,16 +100,23 @@ h1 {
 
   .content {
     /* pull the content lower, below Jerm's face */
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
+    padding: 1rem 2rem;
+    
   }
 
   .countup .timeel {
     /* make all the time elements 100px in width so they look neat in a vertical fashion */
-    width: 100px;
+    display: inline-block;
+    padding: 1rem;
+    background: white;
+    color: black;
+    width: 7rem;
   }
 
   .countup .timeel:nth-child(even) {
     /* undo the desktop view spacin between each datetime grouping */
     margin-right: 0;
+    margin-bottom: 2px;
   }
 }
