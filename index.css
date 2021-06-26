@@ -7,7 +7,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  position: relative;
   
 }
 
@@ -42,7 +42,6 @@ https://imgur.com/mBgUS8C.png
 #container {
   height: 100vh;
   width: 100%;
-  position: right;
 }
 
 .animate{
@@ -51,9 +50,9 @@ https://imgur.com/mBgUS8C.png
 }
 
 .bg {
-  background-image: url("https://i.imgur.com/syD3h4a.jpg");
+  background-image: url("https://imgur.com/mBgUS8C.png");
   height: calc(100vh + 100px);
-  background-position: 70%;
+  background-position: 65%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -68,7 +67,7 @@ https://imgur.com/mBgUS8C.png
   background-color: rgb(243, 118, 206, 1);
   border-radius: 5px;
   padding: 2rem;
-  margin-bottom: 20vh;
+  margin-bottom: 25vh;
 
 }
 
