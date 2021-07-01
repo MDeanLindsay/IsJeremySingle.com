@@ -119,6 +119,10 @@ https://imgur.com/mBgUS8C.png
     
   }
 
+  .bg {
+    background-position: 70%;
+  }
+
   h2 {
     color: white;
     font-size: 2.5rem;
@@ -135,7 +139,7 @@ https://imgur.com/mBgUS8C.png
 
   .content {
     /* pull the content lower, below Jerm's face */
-    margin-bottom: 20vh;
+    margin-bottom: 23vh;
     padding: .5rem 2rem;
     
   }
