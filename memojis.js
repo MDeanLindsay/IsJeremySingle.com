@@ -1,31 +1,47 @@
-var container = document.getElementById('animate');
-var emoji = ['💖'];
-var circles = [];
+var container = document.getElementById('animated-hearts-container');
+var emoji = '💖';
+var hearts = [];
 
-for (var i = 0; i < 10; i++) {
-  addCircle(i * 150, [10 + 0, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 + 0, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 - 200, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 + 200, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 - 400, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 + 400, 300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 - 600, -300], emoji[Math.floor(Math.random() * emoji.length)]);
-  addCircle(i * 150, [10 + 600, 300], emoji[Math.floor(Math.random() * emoji.length)]);
+
+for (var i = 0; i < 5; i++) {
+  const screenHeight = document.body.scrollHeight;
+  const screenWidth = document.body.scrollWidth;
+  
+
+  addHeart(i, [(screenWidth * 0.00), 0], emoji);
+  addHeart(i, [(screenWidth * 0.00), 100], emoji);
+  addHeart(i, [(screenWidth * 0.00), 200], emoji);
+  addHeart(i, [(screenWidth * 0.25), 300], emoji);
+  addHeart(i, [(screenWidth * 0.25), 200], emoji);
+  addHeart(i, [(screenWidth * 0.25), -300], emoji);
+  addHeart(i, [(screenWidth * 0.25), -200], emoji);
+  addHeart(i, [(screenWidth * 0.50), 300], emoji);
+  addHeart(i, [(screenWidth * 0.50), 200], emoji);
+  addHeart(i, [(screenWidth * 0.50), -300], emoji);
+  addHeart(i, [(screenWidth * 0.50), -200], emoji);
+  addHeart(i, [(screenWidth * 0.75), 300], emoji);
+  addHeart(i, [(screenWidth * 0.75), 200], emoji);
+  addHeart(i, [(screenWidth * 0.75), -300], emoji);
+  addHeart(i, [(screenWidth * 0.75), -200], emoji);
+  addHeart(i, [(screenWidth * 1.00), 300], emoji);
+  addHeart(i, [(screenWidth * 1.00), 200], emoji);
+  addHeart(i, [(screenWidth * 1.00), -300], emoji);
+  addHeart(i, [(screenWidth * 1.00), -200], emoji);
 }
 
 
 
-function addCircle(delay, range, color) {
+function addHeart(delay, range, color) {
   setTimeout(function() {
-    var c = new Circle(range[0] + Math.random() * range[1], 80 + Math.random() * 4, color, {
-      x: -0.15 + Math.random() * 0.3,
+    var newHeart = new Heart(range[0] + Math.random() * range[1], Math.random() * 100, color, {
+      x: -0.25 + Math.random() * 0.7,
       y: 1 + Math.random() * 1
     }, range);
-    circles.push(c);
+    hearts.push(newHeart);
   }, delay);
 }
 
-function Circle(x, y, c, v, range) {
+function Heart(x, y, c, v, range) {
   var _this = this;
   this.x = x;
   this.y = y;
@@ -37,15 +53,16 @@ function Circle(x, y, c, v, range) {
   this.element.style.opacity = 0;
   this.element.style.position = 'absolute';
   this.element.style.fontSize = '26px';
-  this.element.style.color = 'hsl('+(Math.random()*360|0)+',80%,50%)';
+
   this.element.innerHTML = c;
   container.appendChild(this.element);
 
   this.update = function() {
-    if (_this.y > 800) {
-      _this.y = 80 + Math.random() * 4;
+    if (_this.y > document.body.scrollHeight) {
+      _this.y = Math.random() * 4;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
     }
+
     _this.y += _this.v.y;
     _this.x += _this.v.x;
     this.element.style.opacity = 1;
@@ -56,8 +73,8 @@ function Circle(x, y, c, v, range) {
 }
 
 function animate() {
-  for (var i in circles) {
-    circles[i].update();
+  for (var i in hearts) {
+    hearts[i].update();
   }
   requestAnimationFrame(animate);
 }
