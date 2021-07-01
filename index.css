@@ -112,6 +112,13 @@ https://imgur.com/mBgUS8C.png
 
 @media screen and (max-width: 800px) {
 
+  body {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    
+  }
+
   h2 {
     color: white;
     font-size: 2.5rem;
