@@ -3,7 +3,7 @@ var emoji = '💖';
 var hearts = [];
 
 
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 10; i++) {
   const screenHeight = document.body.scrollHeight;
   const screenWidth = document.body.scrollWidth;
   
@@ -58,7 +58,7 @@ function Heart(x, y, c, v, range) {
   container.appendChild(this.element);
 
   this.update = function() {
-    if (_this.y > document.body.scrollHeight) {
+    if (_this.y > window.innerHeight) {
       _this.y = Math.random() * 4;
       _this.x = _this.range[0] + Math.random() * _this.range[1];
     }

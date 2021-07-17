@@ -6,6 +6,7 @@
   "author": "Michael D Lindsay <michaeldeanlindsay@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "dev": "parcel watch index.html",
     "start": "parcel index.html"
   },
   "devDependencies": {
